@@ -16,12 +16,12 @@ import scipy.integrate as integrate
 import matplotlib.animation as animation
 from collections import deque
 
-G = 5.4  # acceleration due to gravity, in m/s^2
-L1 = 1.0  # length of pendulum 1 in m
+G = 9.81  # acceleration due to gravity, in m/s^2
+L1 = 0.5  # length of pendulum 1 in m
 L2 = 1.0  # length of pendulum 2 in m
 L = L1 + L2  # maximal length of the combined pendulum
-M1 = 1.0  # mass of pendulum 1 in kg
-M2 = 1.0  # mass of pendulum 2 in kg
+M1 = 0.5  # mass of pendulum 1 in kg
+M2 = 3.0  # mass of pendulum 2 in kg
 t_stop = 20  # how many seconds to simulate
 history_len = 600  # how many trajectory points to display
 

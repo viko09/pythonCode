@@ -38,7 +38,7 @@ txtb = str(bmin)
 ecuacion = ' y = (' + txtm + '\pm' + txterrorm + ')x +(' + txtb + '\pm' + txterrorb + ')'
 # Plot the fitted function
 plt.plot(xdata, ydata, 'ro', alpha=0.5)
-plt.plot(xdata, ydata, 'bo', label='Datos', [f1(i) for i in xdata], 'r', alpha=0.5)
+# plt.plot(xdata, ydata, 'bo', label='Datos', [f1(i) for i in xdata], 'r', alpha=0.5)
 plt.title('Datos Experimentales con su Ajuste')
 plt.text(1, -0.6, r'$' + ecuacion + '$', fontsize=10)
 plt.xlabel('\u03B8 i')
