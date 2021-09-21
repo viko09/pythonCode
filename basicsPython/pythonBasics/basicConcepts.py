@@ -37,7 +37,6 @@ indx2 = L3.index(43)
 print("Index = ", indx)
 print("Index = ", indx2)
 
+# Se puede trabajar con el numero que devuelve
 d = indx * 2
 print(d)
-
-# Se puede trabajar con el numero que devuelve
