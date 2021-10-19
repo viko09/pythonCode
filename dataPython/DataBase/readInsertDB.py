@@ -1,5 +1,7 @@
 import sqlite3
 
+# This code can input and read data from our database
+
 cnx = sqlite3.connect("ejemplo.db")
 cursor = cnx.cursor()
 
@@ -19,5 +21,8 @@ users = cursor.fetchall()
 # printing users
 for u in users:
     print(u)
+
+# We take one data from our db
+user = cursor.fetchone()
 
 cnx.close()
