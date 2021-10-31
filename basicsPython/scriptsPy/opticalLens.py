@@ -1,7 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.optimize import curve_fit
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
 
 # Here we import our csv data
 data = pd.read_csv('measures20.csv')
@@ -41,8 +42,9 @@ print("---------------------------------------------------------------")
 # New Dataset
 newData = pd.concat([x_cv, y_cv], axis=1, keys=["X = 1/s", "Y = 1/s'"])
 print(newData)
-compression_opts = dict(method='zip', archive_name='out.csv')
-newData.to_csv('out.zip', compression=compression_opts)
+
+# compression_opts = dict(method='zip', archive_name='out.csv')
+# newData.to_csv('out.zip', compression=compression_opts)
 
 print("---------------------------------------------------------------")
 # Values for the fitted fun
@@ -73,7 +75,7 @@ plt.savefig("/home/vikoluna/Documents/BUAP/5toSemtre/FEXPIII/practica4/datoslent
 
 # Show.
 plt.show()
-
+# print("---------------------------------------------------------------")
 plt.plot(x_test, y_test, 'bo', alpha=0.55, label='Datos nueva variable')
 
 # Graph's Data
@@ -88,4 +90,34 @@ plt.legend()
 # Save as png
 plt.savefig("/home/vikoluna/Documents/BUAP/5toSemtre/FEXPIII/practica4/datoscam.png")
 
+plt.show()
+# print("---------------------------------------------------------------")
+# Create a linear regression model based the positioning of the data and Intercept, and predict a Best Fit:
+model = LinearRegression(fit_intercept=True)
+model.fit(x_cv, y_cv)
+
+# Print the Intercept:
+print('intercept:', model.intercept_)
+
+# Print the Slope:
+print('slope:', model.coef_)
+
+xfit = np.linspace(0.045, 0.12, 1000)
+yfit = model.predict(xfit[:, np.newaxis])
+
+# print("---------------------------------------------------------------")
+plt.plot(x_test, y_test, 'bo', alpha=0.55, label='Datos nueva variable')
+plt.plot(xfit, yfit, 'purple', alpha=0.55, label='Ajuste: -0.99996441x + 0.12703695')
+
+# Graph's Data
+plt.title("Gráfica de datos y ajuste con cambio de variable")
+plt.xlabel("Objeto (1/s)")
+plt.ylabel("Imagen (1/s')")
+
+# Graph Settings
+plt.grid(color='g', linestyle='dotted', linewidth=1)
+plt.legend()
+
+# Save as png
+# plt.savefig("/home/vikoluna/Documents/BUAP/5toSemtre/FEXPIII/practica4/datoscam.png")
 plt.show()
