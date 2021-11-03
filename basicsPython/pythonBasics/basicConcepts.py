@@ -40,3 +40,27 @@ print("Index = ", indx2)
 # Se puede trabajar con el numero que devuelve
 d = indx * 2
 print(d)
+
+# Tuples: I can not add or delete elements of the tuple
+tup = (5, 7, 9, 19, 'D')
+# print(id(tup))
+print(type(tup))
+print(tup)
+tup1 = tup.count(tup)
+print(tup1)
+
+# Dictionaries
+newDic = {'name': 'Viko', 'email': 'someone@gmail.com', 'age': '13'}
+print(newDic)
+
+# Sets:
+niuSet = {2, 4, 5, 6, 7, 7, 8, 8, 65, 4}
+
+# Complex numbers
+cplx = 6 + 8j
+print(cplx)
+print(cplx*3)
+
+# integer division
+inDiv = 10//3
+print(inDiv)

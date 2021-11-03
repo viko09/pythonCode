@@ -10,6 +10,7 @@ myVar3 = "Hello, this is Victor"
 f1 = True
 f2 = False
 
+# Python vars should start with lower case, digits are allowed but not at the start
 print(myVar1)
 print(myVar2)
 print(myVar3)
@@ -33,9 +34,9 @@ print(x, " + ", y, " = ", z)
 
 # Literals are assigned to variables
 
-# id() function: Give us the memory path where it is stored
+# ´´´ id() function: Give us the memory path where it is stored
 # se eliminan y se vuelven a crear cuando termina de ejecutarse un programa
-
+# ```
 print(id(myVar1))
 print(id(myVar2))
 print(id(myVar4))
