@@ -81,7 +81,7 @@ plt.plot(x_test, y_test, 'bo', alpha=0.55, label='Datos nueva variable')
 # Graph's Data
 plt.title("Gráfica de datos con cambio de variable")
 plt.xlabel("Objeto (1/s)")
-plt.ylabel("Imagen (1/s')")
+plt.ylabel("Imagen (1/s)")
 
 # Graph Settings
 plt.grid(color='g', linestyle='dotted', linewidth=1)
