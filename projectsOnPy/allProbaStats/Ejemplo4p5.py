@@ -16,12 +16,12 @@ x = sp.Symbol('x')
 f = sp.Piecewise((0, x < 0.5),(0.15*sp.exp(-0.15*(x-0.5)),x>=0.5))
 
 # A
-R=sp.integrate(f, (x,-sp.oo,sp.oo))
+R = sp.integrate(f, (x, -sp.oo, sp.oo))
 print('A')
 print(R)
 
 # B
-R=sp.integrate(f, (x,-sp.oo,5))
+R = sp.integrate(f, (x, -sp.oo, 5))
 print('B')
 print(R)
 
