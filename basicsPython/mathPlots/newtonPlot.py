@@ -2,24 +2,21 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-
 # If this is the principal script, follow the next process
 if __name__ == "__main__":
-
-
     def f(t, k, c):
-        return c*(np.exp(k*t)) + 127.8
+        return c * (np.exp(k * t)) + 127.8
 
 
     c = -105.8
-    k = (np.log((45-127.8)/-105.8))/30
+    k = (np.log((45 - 127.8) / -105.8)) / 30
     t = np.arange(0, 110, 0.001)
     t1 = np.arange(0, 600, 0.0001)
     print(f(t1, k, c))
     datosY = pd.array(f(t1, k, c))
     datosX = pd.array(t1)
     print(datosX, datosY)
-# Plotting Graph
+    # Plotting Graph
     plt.gca()
     plt.gca().plot(t, f(t, k, c), color='purple', alpha=0.65, label=r'$T(t) = -105.8e^{-0.008170749\cdot t} + 127.8$')
     plt.plot(0, 22, color='r', alpha=0.55, marker='o')

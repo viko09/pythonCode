@@ -1,3 +1,4 @@
+import sys
 print("Hello world")
 
 # Saving variable
@@ -224,3 +225,11 @@ print(inDiv)
 
 # Hint: Pista
 x: str = "Hola Esto es un hint x: int = "  # En cualquier momento puede cambiar
+
+# bin() function: shows numbers in binary
+print(bin(12))
+
+# Command Line Arguments
+# import sys
+print("Number of arguments: ", len(sys.argv), 'arguments.')
+print("Argument list: ", str(sys.argv))
